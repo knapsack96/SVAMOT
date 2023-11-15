@@ -27,21 +27,21 @@ from munkres import Munkres
 import os
 import pandas as pd
 
-for i in os.listdir(os.getcwd() +'/GroundTruth20/'):
+for i in os.listdir(os.getcwd() +'/MOTRealGroundTruth20/'):
         print(i)
         glob_id = 0
         #if i[0:27] == 'LABEL_GRAPH_CLASSIFICATION_':
         #if i == 'LABEL_GRAPH_CLASSIFICATION_07.txt':
         
-        with open(os.getcwd() +'/ByteTrack20/'+i[27:]) as f:
+        with open(os.getcwd() +'/ByteTrack20/MOT20-'+i) as f:
                 bytetrack=f.readlines()
         bytetrack = [x.split(',') for x in bytetrack]
 
-        with open(os.getcwd()+'/OUTrack20/'+i[27:]) as f:
+        with open(os.getcwd()+'/OUTrack20/MOT20-'+i) as f:
                 outrack=f.readlines()
         outrack = [x.split(',') for x in outrack]
         
-        with open(os.getcwd() +'/SVaMOT20/MOT20-'+i[27:]) as f:
+        with open(os.getcwd() +'/SVaMOT20/MOT20-'+i) as f:
                 results=f.readlines()
         results = [x.split(',') for x in results]
 
@@ -66,7 +66,7 @@ for i in os.listdir(os.getcwd() +'/GroundTruth20/'):
         
         bt_remap = {}                
         ot_remap = {}
-        with open(os.getcwd() +'/SVaMOT20_dacaricare/MOT20-'+i[27:],'w') as f:
+        with open(os.getcwd() +'/SVaMOT20_dacaricare/MOT20-'+i,'w') as f:
                 tracker = -1
 
                 ids_frames = results['frame'].unique()
