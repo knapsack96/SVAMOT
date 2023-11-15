@@ -31,4 +31,5 @@ ith open('svm0025bytetrackouttrack20.pkl','wb') as f:
 
 #with open('svmoterpermatrack17.pkl','wb') as f:
 #    pickle.dump([h for h in zip([x[0] for x in test],label)], f)
-print(sum(label==target)*100/len(target))                                       
+
+#print(sum(label==target)*100/len(target))                                       
