@@ -1,5 +1,5 @@
 # SVAMOT
-Support Vector Machine Approach for Multi-Object Trackers Fusion Strategy (#1 on MOT17, MOT20 on both private and public detections, considering published works)
+Support Vector Machine Approach for Multi-Object Trackers Fusion Strategy (#1 on MOT17, MOT20 in 2023 on both private and public detections, considering published works)
 
 The files in this repo have different and consequent functionalities.
 
