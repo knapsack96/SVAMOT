@@ -126,5 +126,5 @@ for i in os.listdir(os.getcwd() +'/OUTrack_ByteTrack_GroundTruth17/'):
                     training.append(features)#, c])
 print(counter)
 
-with open("outrackerbytetrack17.pkl", "wb") as f: 
+with open("outrackerbytetrack_data17.pkl", "wb") as f: 
     training = pickle.dump(training, f)
