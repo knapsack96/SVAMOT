@@ -12,6 +12,11 @@ with open("outrackbytetrack_data17.pkl","rb") as f:
 with open("outrackbytetrack_data20.pkl","rb") as f:
     test = pickle.load(f)
 
+# features are organised in the following way:
+# first tracker : [0] - index of the frame, [1] - score, [2] - tracks, [3] - x coordinate, [4] - y coordinate, [5] - w, [6] - h
+# second tracker : [7] - score, [8] - tracks, [9] - x coordinate, [10] - y coordinate, [11] - w, [12] - h
+# label : [13]
+
 X = np.array([x[1:3]+x[5:7]+x[11:13] for x in train])
 
 
